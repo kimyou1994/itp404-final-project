@@ -1,0 +1,119 @@
+<div class="content">
+		<div class="row main">
+				<div class="col-sm-2 side">
+				</div>
+				<div class="col-sm-8 text-center"> 
+						<h1>Add New Business</h1>
+						<form onsubmit={{action "createBusiness"}}>
+								<div class="form-group row">
+										<label class="col-sm-6 col-form-label text-sm-right" for="alias">Alias</label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="alias" 
+														value=model.alias
+												}}
+										</div>
+								</div>
+								<div class="form-group row">
+										<label  class="col-sm-6 col-form-label text-sm-right" for="name">Name<span class="text-danger">*</span></label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="name" 
+														value=model.name
+												}}
+										</div>
+								</div>
+								<div class="form-group row">
+										<label class="col-sm-6 col-form-label text-sm-right" for="address">Address<span class="text-danger">*</span></label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="address" 
+														value=model.address
+												}}
+										</div>
+								</div>
+								<div class="form-group row">
+										<label class="col-sm-6 col-form-label text-sm-right" for="phone">Phone<span class="text-danger">*</span></label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="phone" 
+														value=model.phone
+												}}
+										</div>
+								</div>
+								<div class="form-group row">
+										<label class="col-sm-6 col-form-label text-sm-right" for="url">Website</label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="url" 
+														value=model.url
+												}}
+										</div>
+								</div>
+								<div class="form-group row">
+										<label class="col-sm-6 col-form-label text-sm-right" for="photo_url">Photo</label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="photo_url" 
+														value=model.photo_url
+												}}
+										</div>
+								</div>
+								<div class="form-group row">
+										<label class="col-sm-6 col-form-label text-sm-right" for="latitude">Latitude</label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="latitude" 
+														value=model.latitude
+												}}
+										</div>
+								</div>
+								<div class="form-group row">
+										<label class="col-sm-6 col-form-label text-sm-right" for="latitude">Longitude</label>
+										<div class="col-sm-4">
+												{{input 
+														type="text" 
+														class="form-control" 
+														size="35" 
+														id="longitude" 
+														value=model.longitude
+												}}
+										</div>
+								</div>
+								<div><h1><span class="text-danger text-lg-center">{{message}}</span></h1></div>
+								<div class="create-button col-sm-12">
+										<button 
+												data-test="create-submit" 
+												class="btn btn-success" 
+												type="submit"
+										>
+												Compose
+										</button>
+								</div>
+						</form>
+				</div>
+				<div class="col-sm-2 side">
+				</div>
+		</div>
+</div>

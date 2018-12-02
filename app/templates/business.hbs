@@ -1,0 +1,55 @@
+<div class="business-option">
+		{{#link-to "index"}}
+				<a 
+						href="#" 
+						class="btn btn-info btn-lg back-button"
+				>
+						<span class="glyphicon glyphicon-chevron-left"></span> Back
+				</a>
+		{{/link-to}}
+
+		<a 
+				href="#" 
+				data-test="business-delete" 
+				class="btn btn-info btn-lg" 
+				onclick={{action "deleteBusiness" model}}
+		>
+				<span class="glyphicon glyphicon-trash"></span> Trash 
+		</a>
+</div>
+<div class="content">
+		<div class="row main">
+				<div class="col-sm-2 side">
+				</div>
+				<div class="col-sm-8 text-center"> 
+						<h1 data-test="business-name">{{model.name}}</h1>
+						<h2 data-test="business-address">{{model.address}}</h2>
+						<h2 data-test="business-phone">{{model.phone}}</h2>
+						<a 
+								href={{model.url}} 
+								target="_blank" 
+								rel="noopener"
+								class="info btn btn-info btn-lg"
+						>
+								<span class="glyphicon glyphicon-globe"></span> Info 
+						</a>
+						<img class="photo" alt={{model.name}} src={{model.photo_url}}>
+				</div>
+				<div class="col-sm-2 side text-center">
+						<StarButton 
+								data-test="business-star"  
+								class="{{model.saved}} star" 
+								@saved={{model.saved}} 
+								@onClick={{action "star"}} 
+						/>
+						{{#link-to "edit" model.id}}		
+								<a 
+										href="#" 
+										class="btn btn-info btn-lg"
+								>
+										<span class="glyphicon glyphicon-pencil"></span> Edit
+								</a>
+						{{/link-to}}
+				</div>
+		</div>
+</div>

@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
+
     modulePrefix: 'final',
     environment,
     rootURL: '/',
@@ -22,8 +23,8 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
   if (environment === 'development') {
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -45,6 +46,9 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    };
   }
 
   return ENV;

@@ -1,0 +1,12 @@
+<h1>Location</h1>
+{{#g-map lat=model.latitude lng=model.longitude zoom=12 as |g|}}
+		{{#g.marker
+				lat=model.latitude
+				lng=model.longitude
+				draggable=true
+		}}
+		{{/g.marker}}
+{{/g-map}}
+{{outlet}}
+
+{{!-- AIzaSyBA3P0jNobvmD54BlNz7AHXzKY5tWZhT8Q --}}

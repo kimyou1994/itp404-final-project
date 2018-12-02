@@ -1,0 +1,21 @@
+<div class="content">
+		<div class="row main">
+				<div class="col-sm-2 side">
+				</div>
+				<div class="col-sm-8 text-left"> 
+						<h1>Search Business</h1>
+						{{#each model as |business|}}
+								<SingleBusiness class="business" @business={{business}}/>
+								<hr>
+						{{/each}}
+				</div>
+				<div class="col-sm-2 side">
+						{{#link-to "create"}}
+								<a href="#" class="create btn btn-info btn-lg">
+										<span class="glyphicon glyphicon-pencil"></span> Add New Business
+								</a>
+						{{/link-to}}
+				</div>
+		</div>
+</div>
+{{outlet}}
