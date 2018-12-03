@@ -1,7 +1,11 @@
 import Controller from '@ember/controller';
+import window from 'ember-window-mock';
 
 export default Controller.extend({
 	actions: {
+		init() {
+			this._super(...arguments);
+		},
 		star(newValue) {
 			this.set('saved', newValue);
 			this.set('model.saved', newValue);

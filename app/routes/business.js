@@ -5,6 +5,6 @@ export default Route.extend({
 		return this.store.findRecord('business', params.id);
 	},
 	title: function() {
-		return this.modelFor('edit').name
+		return this.modelFor('business').name
 	}
 });

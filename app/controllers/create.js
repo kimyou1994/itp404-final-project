@@ -2,11 +2,28 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 	actions: {
+		init() {
+			this._super(...arguments);
+		},
 		createBusiness(event) {
 			event.preventDefault();
-			if (this.name === undefined || this.address === undefined || this.name.trim() === "" || this.address.trim() === "") {
-				this.set('message', 'Please fill out all required fields');
+			if (this.name === undefined ||  this.name.trim() === "") {
+				this.set('missing-name', 'Please fill out name of business');
 				return;
+			}else {
+				this.set('missing-name', '');
+			}
+			if (this.address === undefined ||  this.address.trim() === "") {
+				this.set('missing-address', 'Please fill out address of business');
+				return;
+			}else {
+				this.set('missing-address', '');
+			}
+			if (this.phone === undefined ||  this.phone.trim() === "") {
+				this.set('missing-phone', 'Please fill out phone number of business');
+				return;
+			}else {
+				this.set('missing-phone', '');
 			}
 			let business = this.store.createRecord('business', {
 				alias: this.alis,
@@ -19,9 +36,7 @@ export default Controller.extend({
 				longitude: this.longitude
 			});
 			business.save().then(() => {
-				this.transitionToRoute('business', business.id);
-			},() => {
-				this.set('message', 'Error: Unable to save!');
+				this.transitionToRoute('index');
 			});
 		}
 	}

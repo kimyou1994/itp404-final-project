@@ -5,6 +5,6 @@ export default Route.extend({
 		return this.store.findRecord('business', params.id);
 	},
 	title: function() {
-		return 'Location of ' + this.modelFor('edit').name
+		return 'Location of ' + this.modelFor('map').name
 	}
 });

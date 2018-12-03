@@ -1,12 +1,11 @@
 <a 
 		href="#" 
-		data-test="star-test" 
 		onclick={{action "click"}} 
 		class="btn btn-info btn-lg  {{starred}}"
 >
 		{{#if @saved}}
-				<span data-test="starred-email" class="glyphicon glyphicon-star"></span>Save
+				<span data-test="star-test"  class="glyphicon glyphicon-star"></span>Save
 		{{else}}
-				<span data-test="unstarred-email" class="glyphicon glyphicon-star-empty"></span>Save
+				<span data-test="star-test"  class="glyphicon glyphicon-star-empty"></span>Save
 		{{/if}}
 </a>

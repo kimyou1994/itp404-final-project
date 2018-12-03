@@ -1,3 +1,14 @@
+<div class="business-option">
+		{{#link-to "business" model.id}}
+				<a 
+						href="#" 
+						class="btn btn-info btn-lg back-button"
+				>
+						<span class="glyphicon glyphicon-chevron-left"></span> Back
+				</a>
+		{{/link-to}}
+</div>
+
 <div class="content">
 		<div class="row main">
 				<div class="col-sm-2 side">
@@ -28,6 +39,7 @@
 														value=model.name
 												}}
 										</div>
+										<span class="col-sm-2 text-danger text-lg-center">{{missing-name}}</span>
 								</div>
 								<div class="form-group row">
 										<label class="col-sm-6 col-form-label text-sm-right" for="address">Address<span class="text-danger">*</span></label>
@@ -40,6 +52,7 @@
 														value=model.address
 												}}
 										</div>
+										<span class="col-sm-2 text-danger text-lg-center">{{missing-address}}</span>
 								</div>
 								<div class="form-group row">
 										<label class="col-sm-6 col-form-label text-sm-right" for="phone">Phone<span class="text-danger">*</span></label>
@@ -52,6 +65,7 @@
 														value=model.phone
 												}}
 										</div>
+										<span class="col-sm-2 text-danger text-lg-center">{{missing-phone}}</span>
 								</div>
 								<div class="form-group row">
 										<label class="col-sm-6 col-form-label text-sm-right" for="url">Website</label>
@@ -104,7 +118,7 @@
 								<div><h1><span class="text-danger text-lg-center">{{message}}</span></h1></div>
 								<div class="create-button col-sm-12">
 										<button 
-												data-test="create-submit" 
+												data-test="edit-submit" 
 												class="btn btn-success" 
 												type="submit"
 										>

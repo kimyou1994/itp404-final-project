@@ -6,21 +6,20 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | star-button', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`{{star-button}}`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
+  test('the star is solid when saved is true', async function(assert) {
+    this.set('saved', true);
     // Template block usage:
-    await render(hbs`
-      {{#star-button}}
-        template block text
-      {{/star-button}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    await render(hbs` <StarButton class="star" 
+                        @saved={{saved}} 
+                         />`);
+    assert.dom('[data-test="star-test"]').hasClass('glyphicon-star');
+  });
+  test('the star is empty when saved is false', async function(assert) {
+    this.set('saved', false);
+    // Template block usage:
+    await render(hbs` <StarButton class="star" 
+                        @saved={{saved}} 
+                         />`);
+    assert.dom('[data-test="star-test"]').hasClass('glyphicon-star-empty');
   });
 });
