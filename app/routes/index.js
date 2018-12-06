@@ -6,7 +6,7 @@ export default Route.extend({
 	},
 	title: 'Search Results',
 	actions: {
-		loading(transition, originRoute) {
+		loading(transition) {
 			let controller = this.controllerFor('index');
 				controller.set('currentlyLoading', true);
 				transition.promise.finally(function() {

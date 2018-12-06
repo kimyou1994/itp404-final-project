@@ -7,6 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+	// this.route('index', {path:'/'}, function() {
+	// 	this.route('business', {path: ':business_id'});
+	// 	this.route('saved');
+	// })
+	// this.route('saved');
 	this.route('business', {path: '/businesses/:id'});
 	this.route('create', { path: '/businesses/create'});
 	this.route('edit', { path: '/businesses/:id/edit' });
