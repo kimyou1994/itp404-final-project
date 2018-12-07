@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/kimyou1994/itp404-final-project.svg?branch=master)](https://travis-ci.org/kimyou1994/itp404-final-project)
 1. I wanted to use yelp api to search for business info but couldn't connect nodejs to ember so i
 hardcoded the data
 2. The primary audience would be anyone who need business info
