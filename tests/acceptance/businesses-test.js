@@ -18,7 +18,7 @@ module('Acceptance | businesses', function(hooks) {
 	});
 
 	test('main page has two businesses', async function(assert) {
-		server.createList('businesses', 2);
+		server.createList('business', 2);
 		await visit('/');
 		assert.dom('[data-test="business"]').exists({ count: 2 });
 	});
